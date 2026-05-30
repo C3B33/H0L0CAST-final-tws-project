@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Novinky – H0L0-CAST</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="index.html" class="nav-logo">H0L0-CAST</a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Úvod</a></li>
+    <li><a href="onas.html">O nás</a></li>
+    <li><a href="sluzby.html">Produkty</a></li>
+    <li><a href="galerie.html">Galerie</a></li>
+    <li><a href="dotaznik.html">Dotazník</a></li>
+    <li><a href="kontakty.html">Kontakty</a></li>
+    <li><a href="novinky.html" class="active">Novinky</a></li>
+  </ul>
+  <button class="nav-burger" id="burger" onclick="toggleBurger()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<section>
+  <div class="container">
+    <span class="section-label">// blog &amp; novinky</span>
+    <h2 class="section-title">H0L0 Pulse</h2>
+    <div class="glow-line"></div>
+
+      <div class="news-featured">
+      <div class="news-feat-img" style="background-image:url(img/novinka1.png)"></div>
+      <div>
+        <div class="news-meta">10. 1. 2026 · <span class="tag" style="font-size:.62rem">Aktualita</span></div>
+        <h3 style="font-size:1.1rem;margin:8px 0 10px;">Web H0L0-CAST je hotový — postup prací a shrnutí</h3>
+        <p style="font-size:.82rem;color:var(--text-muted);line-height:1.7;margin-bottom:16px;">Po  měsíci práce je finální verze webu připravena k odevzdání. V článku shrnujeme použité technologie, postup vývoje a co jsme se během projektu naučili.</p>
+        <button class="btn" onclick="showFeedback('Článek se načítá…')">Číst dál →</button>
+      </div>
+    </div>
+
+    <div class="glow-line" style="margin-top:0"></div>
+    <p class="section-label" style="margin-bottom:18px">// ostatní příspěvky</p>
+
+    <div class="grid-3" style="margin-bottom:36px;">
+      <div class="news-card">
+        <div class="news-card-img" style="background-image:url(img/colorscheme.jpg)"></div>
+        <div class="news-card-body">
+          <div class="news-meta">15. 1. 2026 · Vývoj</div>
+          <h4>Jak jsme vybírali barevné schéma pro H0L0-CAST</h4>
+          <p>Rozhodování mezi dark a light tématem, testování kontrastů a finální volba.</p>
+          <button class="btn" style="margin-top:8px;padding:5px 12px;font-size:.75rem" onclick="showFeedback('Článek se načítá…')">Číst →</button>
+        </div>
+      </div>
+      <div class="news-card">
+        <div class="news-card-img" style="background-image:url(img/webapp.jpg)"></div>
+        <div class="news-card-body">
+          <div class="news-meta">28. 2. 2026 · Technologie</div>
+          <h4>Single-page aplikace bez frameworku — proč a jak</h4>
+          <p>Čisté HTML+CSS+JS bez Reactu, Vue nebo Angularu. Výhody a nevýhody.</p>
+          <button class="btn" style="margin-top:8px;padding:5px 12px;font-size:.75rem" onclick="showFeedback('Článek se načítá…')">Číst →</button>
+        </div>
+      </div>
+      <div class="news-card">
+        <div class="news-card-img" style="background-image:url(img/dronescheme.jpg)"></div>
+        <div class="news-card-body">
+          <div class="news-meta">10. 4. 2026 · R&amp;D</div>
+          <h4>H0L0DRONE: koncept dronové holografie</h4>
+          <p>Jak jsme prezentovali holografický dronový roj.</p>
+          <button class="btn" style="margin-top:8px;padding:5px 12px;font-size:.75rem" onclick="showFeedback('Článek se načítá…')">Číst →</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="newsletter-box">
+      <div>
+        <h3 style="font-size:.88rem;margin-bottom:5px;">H0L0 Newsletter</h3>
+        <p style="font-size:.78rem;color:var(--text-muted);">Novinky o projektu. Max. 2× měsíčně.</p>
+      </div>
+      <div style="flex:1;min-width:180px;">
+        <label class="form-label">Váš e-mail</label>
+        <input class="form-input" type="email" placeholder="vas@email.cz" />
+      </div>
+      <button class="btn btn-filled" onclick="showFeedback('Přihlášeno k odběru! Děkujeme.')">Přihlásit →</button>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo-txt">H0L0-CAST</div>
+        <p>Holographic Output &amp; Light Operations — studentský projekt WEBY · 2026</p>
+        <p style="margin-top:10px;font-family:var(--font-mono);font-size:.7rem;color:var(--text-muted);">Fiktivní společnost · všechna data jsou fiktivní</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigace</h4>
+        <ul>
+          <li><a href="index.html">Úvod</a></li>
+          <li><a href="onas.html">O nás</a></li>
+          <li><a href="sluzby.html">Produkty</a></li>
+          <li><a href="galerie.html">Galerie</a></li>
+          <li><a href="dotaznik.html">Dotazník</a></li>
+          <li><a href="kontakty.html">Kontakty</a></li>
+          <li><a href="novinky.html">Novinky</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Produkty</h4>
+        <ul>
+          <li><a href="sluzby.html">H0L0SCREEN</a></li>
+          <li><a href="sluzby.html">H0L0STAGE</a></li>
+          <li><a href="sluzby.html">H0L0MED</a></li>
+          <li><a href="sluzby.html">H0L0TWIN</a></li>
+          <li><a href="sluzby.html">H0L0ID</a></li>
+          <li><a href="sluzby.html">H0L0DRONE</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>O projektu</h4>
+        <ul>
+          <li><a href="onas.html">O projektu</a></li>
+          <li><a href="onas.html">Harmonogram</a></li>
+          <li><a href="https://github.com/C3B33" target="_blank">GitHub →</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 H0L0-CAST · studentský projekt, žádná reálná společnost</span>
+      <div class="footer-sponsors">
+        <span class="sponsor-label">Naši sponzoři:</span>
+        <a href="https://phantomas-cyb.github.io/final-tws-project/index.html" target="_blank" rel="noopener"><img src="img/telekom-logo.svg" alt="Telekom a.s." /></a>
+        <a href="https://ddb.neocities.org" target="_blank" rel="noopener"><img src="img/ddb-logo.svg" alt="DDB" /></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

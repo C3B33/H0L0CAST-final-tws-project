@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Kontakty – H0L0-CAST</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="index.html" class="nav-logo">H0L0-CAST</a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Úvod</a></li>
+    <li><a href="onas.html">O nás</a></li>
+    <li><a href="sluzby.html">Produkty</a></li>
+    <li><a href="galerie.html">Galerie</a></li>
+    <li><a href="dotaznik.html">Dotazník</a></li>
+    <li><a href="kontakty.html" class="active">Kontakty</a></li>
+    <li><a href="novinky.html">Novinky</a></li>
+  </ul>
+  <button class="nav-burger" id="burger" onclick="toggleBurger()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<section>
+  <div class="container">
+    <span class="section-label">// kontakt</span>
+    <h2 class="section-title">Spojte se s námi</h2>
+    <div class="glow-line"></div>
+
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3>Kontaktní údaje</h3>
+        <ul class="contact-info-list">
+          <li><span>📍</span><span>Střední odborná škola informatiky a SPOJŮ, Kolín</span></li>
+          <li><span>📞</span><span>+420 736 717 366</span></li>
+          <li><span>✉️</span><span>info@h0l0-cast.cz</span></li>
+          <li><span>🌐</span><span>github.com/h0l0-cast</span></li>
+        </ul>
+
+        <a href="https://mapy.com/s/detohazuga" target="_blank">
+          <img src="img/mapa.png" alt="Mapa – SPOJE Kolín" style="width:100%;border:1px solid var(--border);border-radius:var(--radius);display:block;" />
+        </a>
+      </div>
+
+      <div>
+        <h3 style="font-size:1rem;margin-bottom:18px;">Napište nám</h3>
+        <form onsubmit="showFeedback('Zpráva byla odeslána. Děkujeme!');return false">
+        <div class="form-group">
+          <label class="form-label">Jméno a příjmení <span style="color:var(--accent)">*</span></label>
+          <input class="form-input" type="text" placeholder="Vaše jméno…" required />
+        </div>
+        <div class="form-group">
+          <label class="form-label">E-mail <span style="color:var(--accent)">*</span></label>
+          <input class="form-input" type="email" placeholder="vas@email.cz" required />
+        </div>
+        <div class="form-group">
+          <label class="form-label">Předmět</label>
+          <input class="form-input" type="text" placeholder="Dotaz / připomínka …" />
+        </div>
+        <div class="form-group">
+          <label class="form-label">Zpráva <span style="color:var(--accent)">*</span></label>
+          <textarea class="form-textarea" placeholder="Vaše zpráva…" required></textarea>
+        </div>
+        <div class="form-group">
+          <label class="form-check"><input type="checkbox" required /> Souhlasím se zpracováním osobních údajů (GDPR) <span style="color:var(--accent)">*</span></label>
+        </div>
+        <button type="submit" class="btn btn-filled">Odeslat zprávu ✉️</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo-txt">H0L0-CAST</div>
+        <p>Holographic Output &amp; Light Operations — studentský projekt WEBY · 2026</p>
+        <p style="margin-top:10px;font-family:var(--font-mono);font-size:.7rem;color:var(--text-muted);">Fiktivní společnost · všechna data jsou fiktivní</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigace</h4>
+        <ul>
+          <li><a href="index.html">Úvod</a></li>
+          <li><a href="onas.html">O nás</a></li>
+          <li><a href="sluzby.html">Produkty</a></li>
+          <li><a href="galerie.html">Galerie</a></li>
+          <li><a href="dotaznik.html">Dotazník</a></li>
+          <li><a href="kontakty.html">Kontakty</a></li>
+          <li><a href="novinky.html">Novinky</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Produkty</h4>
+        <ul>
+          <li><a href="sluzby.html">H0L0SCREEN</a></li>
+          <li><a href="sluzby.html">H0L0STAGE</a></li>
+          <li><a href="sluzby.html">H0L0MED</a></li>
+          <li><a href="sluzby.html">H0L0TWIN</a></li>
+          <li><a href="sluzby.html">H0L0ID</a></li>
+          <li><a href="sluzby.html">H0L0DRONE</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>O projektu</h4>
+        <ul>
+          <li><a href="onas.html">O projektu</a></li>
+          <li><a href="onas.html">Harmonogram</a></li>
+          <li><a href="https://github.com/C3B33" target="_blank">GitHub →</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 H0L0-CAST · studentský projekt, žádná reálná společnost</span>
+      <div class="footer-sponsors">
+        <span class="sponsor-label">Naši sponzoři:</span>
+        <a href="https://phantomas-cyb.github.io/final-tws-project/index.html" target="_blank" rel="noopener"><img src="img/telekom-logo.svg" alt="Telekom a.s." /></a>
+        <a href="https://ddb.neocities.org" target="_blank" rel="noopener"><img src="img/ddb-logo.svg" alt="DDB" /></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

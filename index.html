@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>H0L0-CAST – závěrečný projekt</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="index.html" class="nav-logo">H0L0-CAST</a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html" class="active">Úvod</a></li>
+    <li><a href="onas.html">O nás</a></li>
+    <li><a href="sluzby.html">Produkty</a></li>
+    <li><a href="galerie.html">Galerie</a></li>
+    <li><a href="dotaznik.html">Dotazník</a></li>
+    <li><a href="kontakty.html">Kontakty</a></li>
+    <li><a href="novinky.html">Novinky</a></li>
+  </ul>
+  <button class="nav-burger" id="burger" onclick="toggleBurger()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <div class="section-label">Holographic Output &amp; Light Operations</div>
+        <h1>Fiktivní startup<br/>v oblasti <span>holografických</span><br/>displejů.</h1>
+        <p>Tento web vznikl jako závěrečný projekt v rámci předmětu WEBY. Představujeme fiktivní technologickou firmu H0L0-CAST, která vyvíjí holografické systémy pro průmysl, medicínu a zábavu. Veškeré údaje o této firmě jsou fiktivní.</p>
+        <div class="hero-btns">
+          <a href="sluzby.html" class="btn btn-filled">→ Naše produkty</a>
+          <a href="kontakty.html" class="btn">Kontaktujte nás</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="holo-ring"></div>
+        <div class="holo-ring"></div>
+        <div class="holo-ring"></div>
+        <div class="holo-core"></div>
+        <div class="holo-cross">H0L0-CAST</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="stats-row">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item">
+        <span class="stat-val">4</span>
+        <p>Lidé v týmu</p>
+      </div>
+      <div class="stat-item">
+        <span class="stat-val">3</span>
+        <p>Funkční prototypy</p>
+      </div>
+      <div class="stat-item">
+        <span class="stat-val">2</span>
+        <p>Patenty v přípravě</p>
+      </div>
+      <div class="stat-item">
+        <span class="stat-val">0→1</span>
+        <p>Roky vývoje</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="services-preview">
+  <div class="container">
+    <span class="section-label">// co připravujeme</span>
+    <h2 class="section-title">Naše technologie<br/>ve <span class="accent">vývoji.</span></h2>
+    <div class="glow-line"></div>
+    <div class="grid-3">
+      <div class="svc-card">
+        <span class="svc-icon">🖥️</span>
+        <h3>H0L0SCREEN</h3>
+        <p>Průmyslový holografický displej vyvíjený pro přehlednou a jednoduchou manipulaci s výrobními linkami a firemní logistikou — prototyp je zatím ve 2. fázi vývoje, kde ladíme 3D zobrazení a interakci s ním</p>
+      </div>
+      <div class="svc-card">
+        <span class="svc-icon">🎭</span>
+        <h3>H0L0STAGE</h3>
+        <p> Vytváření holografických průvodců, informativních asistentů a mnoho dalšího! Ve fantazii se meze nekladou</p>
+      </div>
+      <div class="svc-card">
+        <span class="svc-icon">🏥</span>
+        <h3>H0L0MED</h3>
+        <p>Koncepční návrh pro využití v oblasti medicíny — analýza CT/MRI dat v prostoru </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo-txt">H0L0-CAST</div>
+        <p>Holographic Output &amp; Light Operations — studentský projekt WEBY · 2026</p>
+        <p style="margin-top:10px;font-family:var(--font-mono);font-size:.7rem;color:var(--text-muted);">Fiktivní společnost · všechna data jsou fiktivní</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigace</h4>
+        <ul>
+          <li><a href="index.html">Úvod</a></li>
+          <li><a href="onas.html">O nás</a></li>
+          <li><a href="sluzby.html">Produkty</a></li>
+          <li><a href="galerie.html">Galerie</a></li>
+          <li><a href="dotaznik.html">Dotazník</a></li>
+          <li><a href="kontakty.html">Kontakty</a></li>
+          <li><a href="novinky.html">Novinky</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Produkty</h4>
+        <ul>
+          <li><a href="sluzby.html">H0L0SCREEN</a></li>
+          <li><a href="sluzby.html">H0L0STAGE</a></li>
+          <li><a href="sluzby.html">H0L0MED</a></li>
+          <li><a href="sluzby.html">H0L0TWIN</a></li>
+          <li><a href="sluzby.html">H0L0ID</a></li>
+          <li><a href="sluzby.html">H0L0DRONE</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>O projektu</h4>
+        <ul>
+          <li><a href="onas.html">O projektu</a></li>
+          <li><a href="onas.html">Harmonogram</a></li>
+          <li><a href="https://github.com/C3B33" target="_blank">GitHub →</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 H0L0-CAST · studentský projekt, žádná reálná společnost</span>
+      <div class="footer-sponsors">
+        <span class="sponsor-label">Naši sponzoři:</span>
+        <a href="https://phantomas-cyb.github.io/final-tws-project/index.html" target="_blank" rel="noopener"><img src="img/telekom-logo.svg" alt="Telekom a.s." /></a>
+        <a href="https://ddb.neocities.org" target="_blank" rel="noopener"><img src="img/ddb-logo.svg" alt="DDB" /></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

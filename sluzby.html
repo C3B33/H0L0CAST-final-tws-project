@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Produkty – H0L0-CAST</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="index.html" class="nav-logo">H0L0-CAST</a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Úvod</a></li>
+    <li><a href="onas.html">O nás</a></li>
+    <li><a href="sluzby.html" class="active">Produkty</a></li>
+    <li><a href="galerie.html">Galerie</a></li>
+    <li><a href="dotaznik.html">Dotazník</a></li>
+    <li><a href="kontakty.html">Kontakty</a></li>
+    <li><a href="novinky.html">Novinky</a></li>
+  </ul>
+  <button class="nav-burger" id="burger" onclick="toggleBurger()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<section>
+  <div class="container">
+    <span class="section-label">// produktové portfolio</span>
+    <h2 class="section-title">Přehled technologií</h2>
+    <div class="glow-line"></div>
+    <div class="svc-full-grid">
+      <div class="svc-full-card">
+        <span class="icon">🖥️</span>
+        <h3>H0L0SCREEN</h3>
+        <p>Průmyslový holografický displej — s 2. fází vývoje cílíme na výrobní linky, sklady a logistiku.</p>
+        <button class="btn" onclick="showFeedback('Více informací o H0L0SCREEN')">Více info →</button>
+      </div>
+      <div class="svc-full-card">
+        <span class="icon">🎭</span>
+        <h3>H0L0STAGE</h3>
+        <p>Platforma pro holografická vystoupení. První demo proběhlo v květnu 2026 s rozlišením 4K voxel.</p>
+        <button class="btn" onclick="showFeedback('Více informací o H0L0STAGE')">Více info →</button>
+      </div>
+      <div class="svc-full-card">
+        <span class="icon">🏥</span>
+        <h3>H0L0MED</h3>
+        <p>Koncepční návrh pro medicínské využití — vizualizace a práce s CT a MRI ve vzduchu. Pilotní projekt s FN.</p>
+        <button class="btn" onclick="showFeedback('Více informací o H0L0MED')">Více info →</button>
+      </div>
+      <div class="svc-full-card">
+        <span class="icon">🏗️</span>
+        <h3>H0L0TWIN</h3>
+        <p>Digitální dvojčata pro architekty. BIM vizualizace v prostoru. Integrace s AutoCAD je ve fázi vývoje.</p>
+        <button class="btn" onclick="showFeedback('Více informací o H0L0TWIN')">Více info →</button>
+      </div>
+      <div class="svc-full-card">
+        <span class="icon">🔐</span>
+        <h3>H0L0ID</h3>
+        <p>Zabezpečovací technologie — Holografické ověřování identity. Koncept pro bankovní sektor a zabezpečení infrastruktur</p>
+        <button class="btn" onclick="showFeedback('Více informací o H0L0ID')">Více info →</button>
+      </div>
+      <div class="svc-full-card">
+        <span class="icon">🚁</span>
+        <h3>H0L0DRONE</h3>
+        <p>Koncepční návrh holografických projekcí pomocí dronů. Tento koncept je zatím pouze v rané fázi vývoje </p>
+        <button class="btn" onclick="showFeedback('Více informací o H0L0DRONE')">Více info →</button>
+      </div>
+    </div>
+
+    <span class="section-label" style="margin-top:40px;display:block">// ceník (fiktivní)</span>
+    <h2 class="section-title" style="margin-bottom:28px;">Orientační ceny</h2>
+    <div class="pricing-grid">
+      <div class="price-card">
+        <h3>STARTER</h3>
+        <div class="price-amount">49 900 Kč</div>
+        <p style="font-size:.72rem;color:var(--text-muted);font-family:var(--font-mono);">/ rok · 1 zařízení</p>
+        <ul>
+          <li>H0L0SCREEN · 1 jednotka</li>
+          <li>Cloud dashboard</li>
+          <li>E-mail podpora</li>
+          <li>Aktualizace SW</li>
+        </ul>
+        <button class="btn" style="margin-top:10px;width:100%" onclick="showFeedback('Poptávka odeslána. Budeme Vás kontaktovat.')">Poptat</button>
+      </div>
+      <div class="price-card featured">
+        <h3>BUSINESS</h3>
+        <span class="badge">Doporučeno</span>
+        <div class="price-amount">149 900 Kč</div>
+        <p style="font-size:.72rem;color:var(--text-muted);font-family:var(--font-mono);">/ rok · až 5 zařízení</p>
+        <ul>
+          <li>Vše ze Starter</li>
+          <li>Libovolný produkt H0L0</li>
+          <li>API přístup</li>
+          <li>SLA 99 %</li>
+          <li>Telefonní podpora</li>
+        </ul>
+        <button class="btn btn-filled" style="margin-top:10px;width:100%" onclick="showFeedback('Poptávka odeslána. Budeme Vás kontaktovat.')">Poptat</button>
+      </div>
+      <div class="price-card">
+        <h3>ENTERPRISE</h3>
+        <div class="price-amount">Na míru</div>
+        <p style="font-size:.72rem;color:var(--text-muted);font-family:var(--font-mono);">neomezená zařízení</p>
+        <ul>
+          <li>Vše z Business</li>
+          <li>Dedikovaný PM</li>
+          <li>On-premise možnost</li>
+          <li>Prioritní podpora</li>
+          <li>Vlastní integrace</li>
+        </ul>
+        <a href="kontakty.html" class="btn" style="margin-top:10px;width:100%;text-align:center;">Kontakt →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo-txt">H0L0-CAST</div>
+        <p>Holographic Output &amp; Light Operations — studentský projekt WEBY · 2026</p>
+        <p style="margin-top:10px;font-family:var(--font-mono);font-size:.7rem;color:var(--text-muted);">Fiktivní společnost · všechna data jsou fiktivní</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigace</h4>
+        <ul>
+          <li><a href="index.html">Úvod</a></li>
+          <li><a href="onas.html">O nás</a></li>
+          <li><a href="sluzby.html">Produkty</a></li>
+          <li><a href="galerie.html">Galerie</a></li>
+          <li><a href="dotaznik.html">Dotazník</a></li>
+          <li><a href="kontakty.html">Kontakty</a></li>
+          <li><a href="novinky.html">Novinky</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Produkty</h4>
+        <ul>
+          <li><a href="sluzby.html">H0L0SCREEN</a></li>
+          <li><a href="sluzby.html">H0L0STAGE</a></li>
+          <li><a href="sluzby.html">H0L0MED</a></li>
+          <li><a href="sluzby.html">H0L0TWIN</a></li>
+          <li><a href="sluzby.html">H0L0ID</a></li>
+          <li><a href="sluzby.html">H0L0DRONE</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>O projektu</h4>
+        <ul>
+          <li><a href="onas.html">O projektu</a></li>
+          <li><a href="onas.html">Harmonogram</a></li>
+          <li><a href="https://github.com/C3B33" target="_blank">GitHub →</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 H0L0-CAST · studentský projekt, žádná reálná společnost</span>
+      <div class="footer-sponsors">
+        <span class="sponsor-label">Naši sponzoři:</span>
+        <a href="https://phantomas-cyb.github.io/final-tws-project/index.html" target="_blank" rel="noopener"><img src="img/telekom-logo.svg" alt="Telekom a.s." /></a>
+        <a href="https://ddb.neocities.org" target="_blank" rel="noopener"><img src="img/ddb-logo.svg" alt="DDB" /></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

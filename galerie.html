@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Galerie – H0L0-CAST</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="index.html" class="nav-logo">H0L0-CAST</a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Úvod</a></li>
+    <li><a href="onas.html">O nás</a></li>
+    <li><a href="sluzby.html">Produkty</a></li>
+    <li><a href="galerie.html" class="active">Galerie</a></li>
+    <li><a href="dotaznik.html">Dotazník</a></li>
+    <li><a href="kontakty.html">Kontakty</a></li>
+    <li><a href="novinky.html">Novinky</a></li>
+  </ul>
+  <button class="nav-burger" id="burger" onclick="toggleBurger()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<section>
+  <div class="container">
+    <span class="section-label">// galerie</span>
+    <h2 class="section-title">Vizuály a ukázky</h2>
+    <div class="glow-line"></div>
+
+    <div class="gallery-grid">
+      <div class="gallery-card">
+        <div class="gallery-item" style="background-image:url(img/Holoscreen.jpg)" onclick="openLightbox('H0L0SCREEN – prototyp','První funkční prototyp průmyslového displeje. Laboratoř FIT, listopad 2024.','img/Holoscreen.jpg')"></div>
+        <div class="gallery-caption">H0L0SCREEN – Prototyp v1</div>
+      </div>
+      <div class="gallery-card">
+        <div class="gallery-item" style="background-image:url(img/holostage.jpg)" onclick="openLightbox('H0L0STAGE – demo','Ukázka holografické projekce na studentské konferenci. Prosinec 2026.','img/holostage.jpg')"></div>
+        <div class="gallery-caption">H0L0STAGE – Demo 2024</div>
+      </div>
+      <div class="gallery-card">
+        <div class="gallery-item" style="background-image:url(img/holomed.jpg)" onclick="openLightbox('H0L0MED – vizualizace','Koncepční rendery medicínského modulu. Spolupráce s ústavem bioinformatiky.','img/holomed.jpg')"></div>
+        <div class="gallery-caption">H0L0MED – Koncepce</div>
+      </div>
+      <div class="gallery-card">
+        <div class="gallery-item" style="background-image:url(img/holotwin.jpg)" onclick="openLightbox('H0L0TWIN – BIM model','Ukázka digitálního dvojčete budovy v prostoru. Studentský projekt BIM.','img/holotwin.jpg')"></div>
+        <div class="gallery-caption">H0L0TWIN – BIM vizualizace</div>
+      </div>
+      <div class="gallery-card">
+        <div class="gallery-item" style="background-image:url(img/holodrone.jpg)" onclick="openLightbox('H0L0DRONE – koncept','Prezentace konceptu dronové holografie.','img/holodrone.jpg')"></div>
+        <div class="gallery-caption">H0L0DRONE – Koncept</div>
+      </div>
+      <div class="gallery-card">
+        <div class="gallery-item" style="background-image:url(img/holoscreen2.jpg)" onclick="openLightbox('Hlavní inženýr H0L0-CAST','Fotografie hlavního inženýra v laboratoři. Léto 2026.','img/holoscreen2.jpg')"></div>
+        <div class="gallery-caption">Hlavní ing. H0L0-CAST – Laboratoř FIT</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="lightbox" id="lightbox" onclick="if(event.target===this)closeLightbox()">
+  <div class="lightbox-inner">
+    <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+    <div class="lightbox-img" id="lb-img">
+      <img id="lb-img-src" alt="" style="width:100%;height:100%;object-fit:cover;border-radius:var(--radius)" />
+    </div>
+    <h3 id="lb-title"></h3>
+    <p id="lb-desc"></p>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo-txt">H0L0-CAST</div>
+        <p>Holographic Output &amp; Light Operations — studentský projekt WEBY · 2026</p>
+        <p style="margin-top:10px;font-family:var(--font-mono);font-size:.7rem;color:var(--text-muted);">Fiktivní společnost · všechna data jsou fiktivní</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigace</h4>
+        <ul>
+          <li><a href="index.html">Úvod</a></li>
+          <li><a href="onas.html">O nás</a></li>
+          <li><a href="sluzby.html">Produkty</a></li>
+          <li><a href="galerie.html">Galerie</a></li>
+          <li><a href="dotaznik.html">Dotazník</a></li>
+          <li><a href="kontakty.html">Kontakty</a></li>
+          <li><a href="novinky.html">Novinky</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Produkty</h4>
+        <ul>
+          <li><a href="sluzby.html">H0L0SCREEN</a></li>
+          <li><a href="sluzby.html">H0L0STAGE</a></li>
+          <li><a href="sluzby.html">H0L0MED</a></li>
+          <li><a href="sluzby.html">H0L0TWIN</a></li>
+          <li><a href="sluzby.html">H0L0ID</a></li>
+          <li><a href="sluzby.html">H0L0DRONE</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>O projektu</h4>
+        <ul>
+          <li><a href="onas.html">O projektu</a></li>
+          <li><a href="onas.html">Harmonogram</a></li>
+          <li><a href="https://github.com/C3B33" target="_blank">GitHub →</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 H0L0-CAST · studentský projekt, žádná reálná společnost</span>
+      <div class="footer-sponsors">
+        <span class="sponsor-label">Naši sponzoři:</span>
+        <a href="https://phantomas-cyb.github.io/final-tws-project/index.html" target="_blank" rel="noopener"><img src="img/telekom-logo.svg" alt="Telekom a.s." /></a>
+        <a href="https://ddb.neocities.org" target="_blank" rel="noopener"><img src="img/ddb-logo.svg" alt="DDB" /></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

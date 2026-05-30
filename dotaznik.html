@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Dotazník – H0L0-CAST</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="index.html" class="nav-logo">H0L0-CAST</a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Úvod</a></li>
+    <li><a href="onas.html">O nás</a></li>
+    <li><a href="sluzby.html">Produkty</a></li>
+    <li><a href="galerie.html">Galerie</a></li>
+    <li><a href="dotaznik.html" class="active">Dotazník</a></li>
+    <li><a href="kontakty.html">Kontakty</a></li>
+    <li><a href="novinky.html">Novinky</a></li>
+  </ul>
+  <button class="nav-burger" id="burger" onclick="toggleBurger()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<section>
+  <div class="container">
+    <span class="section-label">// zpětná vazba</span>
+    <h2 class="section-title">Dotazník spokojenosti</h2>
+    <div class="glow-line"></div>
+
+    <div class="survey-wrap">
+      <div class="survey-title">
+        <h3 style="font-size:1rem;margin-bottom:4px;">Hodnocení webu H0L0-CAST</h3>
+        <p style="font-size:.78rem;color:var(--text-muted);font-family:var(--font-mono);">Součást závěrečného projektu · děkujeme za zpětnou vazbu</p>
+      </div>
+      <div class="survey-annotation">Formulář obsahuje 11 prvků</div>
+
+      <form onsubmit="showFeedback('Děkujeme za Vaše hodnocení!');return false">
+      <div class="form-group">
+        <label class="form-label">1 · Vaše jméno <span style="color:var(--accent)">*</span></label>
+        <input class="form-input" type="text" placeholder="Jan Novák" required />
+      </div>
+      <div class="form-group">
+        <label class="form-label">2 · E-mail <span style="color:var(--accent)">*</span></label>
+        <input class="form-input" type="email" placeholder="jan@example.cz" required />
+      </div>
+      <div class="form-group">
+        <label class="form-label">3 · Jak jste se o projektu dozvěděli?</label>
+        <select class="form-select">
+          <option>— vyberte —</option>
+          <option>Od spolužáků</option>
+          <option>Z přednášky WEBY</option>
+          <option>Z GitHubu</option>
+          <option>Sociální sítě</option>
+          <option>Jiné</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label class="form-label">4 · Celkové hodnocení</label>
+        <div class="radio-group">
+          <label class="form-check"><input type="radio" name="overall" /> Výborné – překonalo očekávání</label>
+          <label class="form-check"><input type="radio" name="overall" /> Dobré – splnilo požadavky</label>
+          <label class="form-check"><input type="radio" name="overall" /> Průměrné – potřebuje zlepšení</label>
+          <label class="form-check"><input type="radio" name="overall" /> Slabé – zklamání</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">5 · Co se vám líbí?</label>
+        <div class="check-group">
+          <label class="form-check"><input type="checkbox" /> Vizuální styl a design</label>
+          <label class="form-check"><input type="checkbox" /> Přehlednost informací</label>
+          <label class="form-check"><input type="checkbox" /> Produktová nabídka</label>
+          <label class="form-check"><input type="checkbox" /> Responzivní provedení</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">6 · Přehlednost webu (1–10)</label>
+        <input type="range" min="1" max="10" value="8" oninput="this.nextElementSibling.textContent='Hodnota: '+this.value" />
+        <div style="font-size:.7rem;color:var(--accent);font-family:var(--font-mono);margin-top:3px;">Hodnota: 8</div>
+        <div class="range-labels"><span>1 – nepřehledný</span><span>10 – velmi přehledný</span></div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">7 · Vizuální hodnocení</label>
+        <div class="star-row" id="stars">
+          <span class="star active" data-i="1">★</span>
+          <span class="star active" data-i="2">★</span>
+          <span class="star active" data-i="3">★</span>
+          <span class="star active" data-i="4">★</span>
+          <span class="star" data-i="5">★</span>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">8 · Zařízení</label>
+        <div style="display:flex;gap:16px;flex-wrap:wrap;">
+          <label class="form-check"><input type="radio" name="device" /> 🖥 Desktop</label>
+          <label class="form-check"><input type="radio" name="device" /> 📱 Mobil</label>
+          <label class="form-check"><input type="radio" name="device" /> 💻 Tablet</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">9 · Obor</label>
+        <select class="form-select">
+          <option>— vyberte —</option>
+          <option>Informatika a výpočetní technika</option>
+          <option>Elektrotechnika</option>
+          <option>Design a UX</option>
+          <option>Jiný technický obor</option>
+          <option>Netechnický obor</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label class="form-label">10 · Připomínky</label>
+        <textarea class="form-textarea" placeholder="Vaše zpětná vazba…"></textarea>
+      </div>
+      <div class="form-group">
+        <label class="form-label">11 · Doporučení</label>
+        <label class="form-check"><input type="checkbox" /> Ano, doporučil/a bych tento web kolegům</label>
+        <label class="form-check" style="margin-top:6px"><input type="checkbox" /> Souhlasím se zpracováním údajů (GDPR)</label>
+      </div>
+
+      <button type="submit" class="btn btn-filled" style="margin-top:6px">Odeslat hodnocení →</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo-txt">H0L0-CAST</div>
+        <p>Holographic Output &amp; Light Operations — studentský projekt WEBY · 2026</p>
+        <p style="margin-top:10px;font-family:var(--font-mono);font-size:.7rem;color:var(--text-muted);">Fiktivní společnost · všechna data jsou fiktivní</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigace</h4>
+        <ul>
+          <li><a href="index.html">Úvod</a></li>
+          <li><a href="onas.html">O nás</a></li>
+          <li><a href="sluzby.html">Produkty</a></li>
+          <li><a href="galerie.html">Galerie</a></li>
+          <li><a href="dotaznik.html">Dotazník</a></li>
+          <li><a href="kontakty.html">Kontakty</a></li>
+          <li><a href="novinky.html">Novinky</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Produkty</h4>
+        <ul>
+          <li><a href="sluzby.html">H0L0SCREEN</a></li>
+          <li><a href="sluzby.html">H0L0STAGE</a></li>
+          <li><a href="sluzby.html">H0L0MED</a></li>
+          <li><a href="sluzby.html">H0L0TWIN</a></li>
+          <li><a href="sluzby.html">H0L0ID</a></li>
+          <li><a href="sluzby.html">H0L0DRONE</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>O projektu</h4>
+        <ul>
+          <li><a href="onas.html">O projektu</a></li>
+          <li><a href="onas.html">Harmonogram</a></li>
+          <li><a href="https://github.com/C3B33" target="_blank">GitHub →</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 H0L0-CAST · studentský projekt, žádná reálná společnost</span>
+      <div class="footer-sponsors">
+        <span class="sponsor-label">Naši sponzoři:</span>
+        <a href="https://phantomas-cyb.github.io/final-tws-project/index.html" target="_blank" rel="noopener"><img src="img/telekom-logo.svg" alt="Telekom a.s." /></a>
+        <a href="https://ddb.neocities.org" target="_blank" rel="noopener"><img src="img/ddb-logo.svg" alt="DDB" /></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
